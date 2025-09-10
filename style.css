@@ -1,15 +1,19 @@
+/* Global */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  line-height: 1.6;
-  background: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f6f9;
   color: #333;
+  line-height: 1.6;
 }
 
+/* Navbar */
 header {
-  background: #222;
-  color: white;
-  padding: 10px 20px;
+  background: #1e293b;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav {
@@ -18,38 +22,125 @@ nav {
   align-items: center;
 }
 
+.logo {
+  color: #fff;
+  margin: 0;
+  font-size: 20px;
+}
+
 nav ul {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 
 nav a {
-  color: white;
+  color: #fff;
   text-decoration: none;
+  font-weight: 500;
 }
 
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* Hero */
 .hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
   text-align: center;
-  padding: 50px;
-  background: #4CAF50;
-  color: white;
+  background: linear-gradient(135deg, #2563eb, #9333ea);
+  color: #fff;
+  padding: 20px;
 }
 
+.hero-content h2 {
+  font-size: 2rem;
+}
+
+.hero-content span {
+  color: #facc15;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #facc15;
+  color: #222;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ffe44d;
+}
+
+/* Sections */
 section {
-  padding: 40px 20px;
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .project-card {
   background: white;
-  padding: 15px;
-  margin: 10px 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Skills */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+.skills-list li {
+  background: #2563eb;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.skills-list li:hover {
+  background: #1e40af;
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background: #222;
+  background: #1e293b;
   color: white;
+  margin-top: 40px;
 }
